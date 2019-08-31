@@ -1,13 +1,11 @@
 package ocp.ch01.review;
 
 public interface Otter {
-
     default void play() {
     }
 }
 
 class RiverOtter implements Otter {
-
     @Override
     public boolean equals(Object o) {
         return false;
@@ -21,5 +19,4 @@ class RiverOtter implements Otter {
     @Override
     public void play() {
     }
-
 }
