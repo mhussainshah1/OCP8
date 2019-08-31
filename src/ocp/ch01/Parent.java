@@ -13,7 +13,7 @@ public class Parent {
 class Child extends Parent {
 
 //    @Override
-    public static Integer method(String name) throws IOException {
+    public final static Integer method(String name) throws IOException {
         System.out.println("Child Method");
         return 2;
     }

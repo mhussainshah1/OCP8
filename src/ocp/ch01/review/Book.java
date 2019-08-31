@@ -6,6 +6,7 @@ public class Book {
     private String title, author;
     private int pageCount;
 
+    @Override
     public int hashCode() {
         return ISBN;
     }
