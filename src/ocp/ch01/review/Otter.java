@@ -13,7 +13,7 @@ class RiverOtter implements Otter {
 
     @Override
     public int hashCode() {
-        return 42;
+        return 42;//not legal
     }
 
     @Override
