@@ -3,6 +3,7 @@ package OCP.ch01.nestedClasses;
 public class Enclosing {
 
     static class Nested {
+
         private int price = 6;
     }
 

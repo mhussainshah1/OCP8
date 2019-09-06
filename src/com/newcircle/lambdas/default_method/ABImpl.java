@@ -23,7 +23,6 @@ public class ABImpl implements A, B {
      * Compiler Error: Duplicate default methods named doSomething with
      * parameters () and () are inherited from types B and A
      */
-
     @Override
     public void doSomething() {
         System.out.println("ABImpl");

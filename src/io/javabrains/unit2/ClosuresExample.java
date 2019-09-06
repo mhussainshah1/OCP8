@@ -15,5 +15,6 @@ public class ClosuresExample {
 }
 
 interface Process {
+
     void process(int i);
 }

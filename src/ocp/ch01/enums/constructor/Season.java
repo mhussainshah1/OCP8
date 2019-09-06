@@ -11,8 +11,8 @@ public enum Season {
     public void printExpectedVisitors() {
         System.out.println(expectedVisitors);
     }
-    
-    public static void main(String[] args){
+
+    public static void main(String[] args) {
         Season.SUMMER.printExpectedVisitors();
     }
 }

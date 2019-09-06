@@ -11,66 +11,67 @@ public class Unit1ExcerciseSolutionJava7 {
         List<Person> people = Arrays.asList(
                 new Person("Charles", "Dickens", 60),
                 new Person("Lewis", "Carroll", 42),
-                new Person("Thomas", "Carlyle", 51),              
+                new Person("Thomas", "Carlyle", 51),
                 new Person("Charlotte", "Bronte", 45),
                 new Person("Matthew", "Arnold", 39)
         );
 
         //Step 1: Sort list by last name
-        Collections.sort(people, new Comparator<Person>(){
+        Collections.sort(people, new Comparator<Person>() {
             @Override
             public int compare(Person o1, Person o2) {
-               return o1.getLastName().compareTo(o2.getLastName());
-            }            
+                return o1.getLastName().compareTo(o2.getLastName());
+            }
         });
-        
+
         //Step 2: Create a method that print all elements in the list
         System.out.println("Printing people");
         printAll(people);
-        
+
         //Step 3: Create a method that prints all people that have last name beginning with 'C'
         System.out.println("Printing people with last name beginning with C");
         printLastNameBegginingWithC(people);
-        
-        printConditionally(people, new Condition(){
+
+        printConditionally(people, new Condition() {
             @Override
             public boolean test(Person p) {
                 return p.getLastName().startsWith("C");
-            }            
+            }
         });
-        
+
         System.out.println("Printing people with first name beginning with C");
-        printConditionally(people, new Condition(){
+        printConditionally(people, new Condition() {
             @Override
             public boolean test(Person p) {
                 return p.getFirstName().startsWith("C");
             }
         });
     }
-    
-    public static void printAll(List<Person> people){
-        for(Person p: people){
+
+    public static void printAll(List<Person> people) {
+        for (Person p : people) {
             System.out.println(p);
         }
     }
 
     private static void printLastNameBegginingWithC(List<Person> people) {
-         for(Person p: people){
-             if(p.getLastName().startsWith("C")){
-                 System.out.println(p);
-             }
+        for (Person p : people) {
+            if (p.getLastName().startsWith("C")) {
+                System.out.println(p);
+            }
         }
     }
-    
+
     private static void printConditionally(List<Person> people, Condition condition) {
-         for(Person p: people){
-             if(condition.test(p)){
-                 System.out.println(p);
-             }
+        for (Person p : people) {
+            if (condition.test(p)) {
+                System.out.println(p);
+            }
         }
     }
-    
-    interface Condition{
+
+    interface Condition {
+
         boolean test(Person p);
     }
 }

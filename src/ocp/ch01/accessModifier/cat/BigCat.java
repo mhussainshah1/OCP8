@@ -1,6 +1,7 @@
 package OCP.ch01.accessModifier.cat;
 
 public class BigCat {
+
     public static void main(String[] args) {
         System.out.println(args.length);
         BigCat cat = new BigCat();

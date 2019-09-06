@@ -7,7 +7,7 @@ import java.util.List;
 public class ListHelper {
 
     public List<String> copyAndSortList(List<String> original) {
-       var list = new ArrayList<String>(original);
+        var list = new ArrayList<String>(original);
         sort(list);
         return list;
     }

@@ -7,25 +7,25 @@ import java.util.function.Consumer;
 
 /**
  * can have one only non default method
- * 
+ *
  * java.util.function has 43 functional interface
- * 
- * Consumer<T>  ----  void accept(T t) --- take input
- * 
- * Supplier<T>  ----  T get()          --- get output
- * 
- * Predicate<T>  ---- void boolean test(T t) --- take input Test and return boolean
- * 
- * Function<T,R> ---  R apply(T t)     -- take input and get output
- * 
+ *
+ * Consumer<T> ---- void accept(T t) --- take input
+ *
+ * Supplier<T> ---- T get() --- get output
+ *
+ * Predicate<T> ---- void boolean test(T t) --- take input Test and return
+ * boolean
+ *
+ * Function<T,R> --- R apply(T t) -- take input and get output
+ *
  */
-
 @FunctionalInterface //Functional Interface have one method
 public interface FunctionalInterfaces {
+
     public void doSomething() throws IOException;
     //public String doSomethingElse(); 
 }
-
 
 class TestException {
 

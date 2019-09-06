@@ -8,10 +8,10 @@ import static java.util.stream.Collectors.groupingBy;
 
 public class Guideline4 {
 
-    List<String> strings = List.of("hello","hello", "how", "are", "you", "?");
+    List<String> strings = List.of("hello", "hello", "how", "are", "you", "?");
 
     public Optional<String> getMaximumEntry() {
-        
+
         /*
         return strings.stream()
                 .collect(groupingBy(s -> s, counting()))
@@ -20,7 +20,6 @@ public class Guideline4 {
                 .max(Map.Entry.comparingByValue())
                 .map(Map.Entry::getKey);
          */
-
         //Spiliting it may yeild a good balanace of readability and concision
         /*Map<String, Long>*/
         var freqMap = strings.stream()

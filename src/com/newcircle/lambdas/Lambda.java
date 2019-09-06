@@ -18,10 +18,10 @@ public class Lambda {
             x += 10;
             System.out.println(x);
         });
-         
+
         integers.forEach(x -> {
             int y = x / 2;
             System.out.println(y);
-        });       
+        });
     }
 }

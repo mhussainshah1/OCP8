@@ -8,9 +8,10 @@ import java.util.List;
  * stream element
  */
 public class GenericTerminalOperation {
+
     public static void main(String[] args) {
         //forEach
-         //Syntax
+        //Syntax
         List<Integer> integers = Arrays.asList(1, 2, 3, 4, 5);
 
         //Single line - infer parameter types

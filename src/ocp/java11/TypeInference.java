@@ -14,13 +14,12 @@ public class TypeInference {
         this.socket = new Socket("localhost", 8080);
     }
 
-    
     public static void main(String[] args) throws IOException {
         var outputStream = new ByteArrayOutputStream();//ByteArrayOutputStream
     }
-    
+
     public String readLine() {
-        try(var is = socket.getInputStream()) { //InputStream
+        try (var is = socket.getInputStream()) { //InputStream
             var isr = new InputStreamReader(is, "hi");//InputStreamReader
             var buf = new BufferedReader(isr);//BufferedReader
             return buf.readLine();
@@ -30,5 +29,4 @@ public class TypeInference {
         return null;
     }
 
-    
 }

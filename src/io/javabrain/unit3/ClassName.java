@@ -9,7 +9,7 @@ public class ClassName {
     }
 
     public static void main(String[] args) {
-        
+
         //Static Method
         Runnable ref1 = ClassName::staticMethod;//() -> ClassName.staticMethod();
         ref1.run();
@@ -18,13 +18,13 @@ public class ClassName {
         ClassName objectReference = new ClassName();
         Runnable ref2 = objectReference::instanceMethod;//() -> objectReference.instanceMethod();
         ref2.run();
-        
+
         Consumer<ClassName> ref3 = ClassName::instanceMethod;//x -> objectReference.instanceMethod();
         ref3.accept(objectReference);
 
         //Constructor
         Runnable ref4 = ClassName::new;//()-> new ClassName();
-        ref4.run();        
+        ref4.run();
     }
 
     public static void staticMethod() {

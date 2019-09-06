@@ -28,7 +28,6 @@ public class ReservedType {
         var price = null;//initialize with null
         var price = 9.95,tax = 0.08; //compound declaration
         var prices = {9.95, 5, 3.50};//initialize array
-        
 
     }
 }

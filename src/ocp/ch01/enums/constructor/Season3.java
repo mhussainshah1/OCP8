@@ -16,7 +16,7 @@ public enum Season3 {
     public void printHours() {
         System.out.println("default hours");
     }
-    
+
     public static void main(String[] args) {
         WINTER.printHours();
         FALL.printHours();

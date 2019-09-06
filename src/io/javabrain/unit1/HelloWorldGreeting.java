@@ -16,7 +16,7 @@ public class HelloWorldGreeting implements Greeting {
         Runnable greetingFunction = () -> System.out.println("Hello World!");
 
         //One Parameter and return
-        Function<Integer, Integer> doubleNumberFunction = (Integer a) -> a * 2;        
+        Function<Integer, Integer> doubleNumberFunction = (Integer a) -> a * 2;
         Function<String, Integer> stringLengthCountFunction = (String s) -> s.length();
 
         //Two Parameter and return
@@ -27,6 +27,6 @@ public class HelloWorldGreeting implements Greeting {
                         return 0.0;
                     }
                     return a / b;
-                };        
+                };
     }
 }

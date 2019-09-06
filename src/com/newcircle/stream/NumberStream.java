@@ -7,6 +7,7 @@ import java.util.stream.LongStream;
  *
  */
 public class NumberStream {
+
     public static void main(String[] args) {
         System.out.println("Long Stream Source");
         LongStream.range(0, 5)

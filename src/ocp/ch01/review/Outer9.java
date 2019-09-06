@@ -6,7 +6,7 @@ public class Outer9 {
 
     public int getX() {
         // Effectively final variable
-        String message = "x is "; 
+        String message = "x is ";
         //Alternatively, final variable
 //      final String message = "x is ";
         class Inner {

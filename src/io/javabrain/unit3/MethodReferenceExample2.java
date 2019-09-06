@@ -21,7 +21,7 @@ public class MethodReferenceExample2 {
 
         System.out.println("Printing people");
         performConditionally(people, p -> true, p -> System.out.println(p));
-        performConditionally(people, p -> true, System.out::println);        
+        performConditionally(people, p -> true, System.out::println);
         //p -> System.out.println(p) === System.out::println
     }
 

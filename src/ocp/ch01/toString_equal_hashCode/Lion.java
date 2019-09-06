@@ -20,7 +20,8 @@ public class Lion {
         Lion otherLion = (Lion) obj;
         return this.idNumber == otherLion.idNumber;
     }
-/*
+
+    /*
     //Overloaded method
     public boolean equals(Lion obj) {
         if (obj == null) {
@@ -28,21 +29,21 @@ public class Lion {
         }
         return this.idNumber == obj.idNumber;
     }
-*/
+     */
     @Override
     public int hashCode() {
 //        return idNumber; //Ok
 //        return 6;//Ok
 //        return idNumber * 7 + age;//Not legal: uses more variable than equals()
 
-         return idNumber * 7 + name.hashCode();
-         //pick the key fields that identify your object (and don’t change during the program) and combine them:
+        return idNumber * 7 + name.hashCode();
+        //pick the key fields that identify your object (and don’t change during the program) and combine them:
     }
-    
+
     public static void main(String[] args) {
-        Lion l1 = new Lion(1,10,"king");
-        Lion l2 = new Lion(1,10,"Queen");
-        
+        Lion l1 = new Lion(1, 10, "king");
+        Lion l2 = new Lion(1, 10, "Queen");
+
         System.out.println(l1.equals(l2));
     }
 }

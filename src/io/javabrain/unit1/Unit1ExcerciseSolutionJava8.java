@@ -8,7 +8,6 @@ package io.javabrain.unit1;
 //Function<T,R> T take in an object, R return another object
 //BiConsumer<T,U> takein two object
 //BiFunction<T,U,R> take in two type, R return new object
-
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
@@ -16,7 +15,7 @@ import java.util.function.Predicate;
 
 public class Unit1ExcerciseSolutionJava8 {
 
-   public static void main(String[] args) {
+    public static void main(String[] args) {
         List<Person> people = Arrays.asList(
                 new Person("Charles", "Dickens", 60),
                 new Person("Lewis", "Carroll", 42),

@@ -18,9 +18,9 @@ public class Hippo {
 //        return name;
 //        return "Name: " + name + ", Weight: " + weight;
 //        return ToStringBuilder.reflectionToString(this);
-        return ToStringBuilder.reflectionToString(this,ToStringStyle.SHORT_PREFIX_STYLE);
+        return ToStringBuilder.reflectionToString(this, ToStringStyle.SHORT_PREFIX_STYLE);
     }
-    
+
     public boolean equals(Object obj) {
         return EqualsBuilder.reflectionEquals(this, obj);
     }

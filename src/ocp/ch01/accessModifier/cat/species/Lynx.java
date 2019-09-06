@@ -15,6 +15,7 @@ class Lynx extends BigCat {
         System.out.println(wildCat.hasFur);
 
     }
+
     void check() {
         System.out.println(hasFur);
     }

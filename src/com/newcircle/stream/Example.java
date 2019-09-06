@@ -24,12 +24,12 @@ public class Example {
         //find is a stream
         Files.find(workingDirPath, maxDepth, (filename, attributes) -> filename.endsWith(classFileName))
                 .forEach((Path path) -> {
-                        try {
-                            Files.lines(path).forEach(System.out::println);//lines is stream
-                        } catch (IOException ex) {
-                            ex.printStackTrace();
-                        }
+                    try {
+                        Files.lines(path).forEach(System.out::println);//lines is stream
+                    } catch (IOException ex) {
+                        ex.printStackTrace();
                     }
-        );
+                }
+                );
     }
 }

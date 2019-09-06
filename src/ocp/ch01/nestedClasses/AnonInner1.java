@@ -1,9 +1,10 @@
 package OCP.ch01.nestedClasses;
 
 public class AnonInner1 {
-    
+
     //Member Inner Class
     abstract class SaleTodayOnly {
+
         abstract int dollarsOff();
     }
 

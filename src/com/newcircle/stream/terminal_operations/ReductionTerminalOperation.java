@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Optional;
 
 /**
- * Reduction Terminal Operations - return a single result. 
+ * Reduction Terminal Operations - return a single result.
  *
  * Nothing happens until the terminal operation is invoked!
  */
@@ -14,7 +14,7 @@ public class ReductionTerminalOperation {
 
     public static void main(String[] args) {
         List<Integer> integers = Arrays.asList(1, 2, 3, 4, 5);
-        
+
         //Count
         Long count = integers.stream() //source
                 //witout intermediate operation
@@ -27,7 +27,6 @@ public class ReductionTerminalOperation {
                 .min((x, y) -> x - y);// .min(Comparator.comparingInt(x -> x));
         System.out.println(result.get());//1
 
-      
         //maximum
         result = integers.stream()
                 .max(Comparator.comparingInt(x -> x));//.max((x, y) -> x - y);

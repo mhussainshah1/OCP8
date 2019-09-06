@@ -18,7 +18,7 @@ public interface Iterable1<T> extends java.lang.Iterable<T> {
 
     @Override
     default void forEach(Consumer<? super T> action) {
-        int a =1;// local variable
+        int a = 1;// local variable
         Objects.requireNonNull(action); //Check object is not null
         for (T t : this) {
             /**

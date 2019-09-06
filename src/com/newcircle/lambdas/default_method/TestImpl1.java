@@ -1,5 +1,6 @@
 package com.newcircle.lambdas.default_method;
 //default method inheritance
+
 interface Test1 {
 
     default void doSomething() {

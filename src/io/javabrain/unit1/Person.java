@@ -2,6 +2,7 @@ package io.javabrain.unit1;
 
 //bean
 public class Person {
+
     //member variables
     private String firstName;
     private String lastName;

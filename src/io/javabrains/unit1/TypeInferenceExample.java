@@ -11,6 +11,7 @@ public class TypeInferenceExample {
     }
 
     interface StringLengthLambda {
+
         int getLength(String s);
     }
 }

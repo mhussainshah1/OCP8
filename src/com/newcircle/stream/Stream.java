@@ -5,14 +5,12 @@ import java.util.Collections;
 import java.util.List;
 
 /**
- * What is a Stream?
- * source -> pipeline -> terminal operations
- * 
- * 
- * Stream Life-cycle
- * ----------------
- * create -> configuration ->  execute -> clean up
- * 
+ * What is a Stream? source -> pipeline -> terminal operations
+ *
+ *
+ * Stream Life-cycle ---------------- create -> configuration -> execute ->
+ * clean up
+ *
  * <ul>
  *
  * <li>Streams are a functional programming design pattern for processing
@@ -29,7 +27,7 @@ import java.util.List;
  *
  */
 public class Stream {
-    
+
     private static List<Order> getOrders() {
         List<Order> list = new ArrayList<>();
         Collections.addAll(list, new Order(Type.ONLINE, 23));
@@ -38,22 +36,21 @@ public class Stream {
 
     public static void main(String[] args) {
         List<Order> orders = getOrders();
-        int totalQuantity = 
-                orders.stream()
-                .filter(o -> o.getType() == Type.ONLINE)
-                .mapToInt(o -> o.getQuantity())
-                .sum();
+        int totalQuantity
+                = orders.stream()
+                        .filter(o -> o.getType() == Type.ONLINE)
+                        .mapToInt(o -> o.getQuantity())
+                        .sum();
         System.out.println(totalQuantity);
-        
+
         //Alternatively,
         totalQuantity = 0;
-        for(Order o: orders){
-            if( o.getType() == Type.ONLINE){
+        for (Order o : orders) {
+            if (o.getType() == Type.ONLINE) {
                 totalQuantity += o.getQuantity();
             }
         }
         System.out.println(totalQuantity);
     }
 
-   
 }

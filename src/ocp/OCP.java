@@ -18,5 +18,5 @@ public class OCP {
         // TODO code application logic here
         System.out.println("Hi");
     }
-    
+
 }

@@ -8,8 +8,8 @@ import java.util.stream.Collectors;
 /**
  * Stateless Intermediate Operations - don't need to know the history of results
  * from the previous steps in the pipeline or keep track of how many results it
- * have produced or seen 
- * 
+ * have produced or seen
+ *
  * - filter, map, flatMap, peek
  *
  */

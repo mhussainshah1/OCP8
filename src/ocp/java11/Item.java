@@ -15,7 +15,6 @@ public class Item {
         this.price = price;
     }
      */
-
     public double price;
 
     public Item() {
@@ -28,8 +27,8 @@ public class Item {
     public void setPrice(double price) {
         this.price = price;
     }
-    
-    public String value(double price){
+
+    public String value(double price) {
         return Double.toString(price);
     }
 

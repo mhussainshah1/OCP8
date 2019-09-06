@@ -1,11 +1,19 @@
 package OCP.ch01.instanceOf;
 
-class HeavyAnimal {}
-class Hippo extends HeavyAnimal{}
-class Elephant extends HeavyAnimal{}
+class HeavyAnimal {
+}
 
-interface Mother {}
-class MotherHippo extends Hippo implements Mother{}
+class Hippo extends HeavyAnimal {
+}
+
+class Elephant extends HeavyAnimal {
+}
+
+interface Mother {
+}
+
+class MotherHippo extends Hippo implements Mother {
+}
 
 public class Main {
 
@@ -18,10 +26,9 @@ public class Main {
         boolean b4 = hippo instanceof Object;//true
         Hippo nullHippo = null;
         boolean b5 = nullHippo instanceof Object;//false
-    
+
         Hippo anotherHippo = new Hippo();
-        
-        
+
         //Compiler check Class at compile time
         boolean b6 = anotherHippo instanceof Elephant;
         //Compiler check interface at runtime

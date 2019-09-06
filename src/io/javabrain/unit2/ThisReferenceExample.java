@@ -21,23 +21,22 @@ public class ThisReferenceExample {
             }
         });
 //        System.out.println(this);//Error: this can't be reference from static method
-        
+
         //now        
         /*        
         thisReferenceExample.doProcess(10, i -> {
         System.out.println("Value of i is" + i);
 //        System.out.println(this);//Error:this can't be reference from static method
         });
-        */        
+         */
         thisReferenceExample.execute();
     }
 
     public static void doProcess(int i, IntConsumer p) {
         p.accept(i);
     }
-    
-    
-    public void execute(){
+
+    public void execute() {
         doProcess(10, i -> {
             System.out.println("Value of i is " + i);
             System.out.println(this);

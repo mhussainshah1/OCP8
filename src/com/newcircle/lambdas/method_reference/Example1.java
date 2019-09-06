@@ -40,7 +40,8 @@ public class Example1 {
          * interface method (accept(T t)) and parameter type must same as
          * functional Interface type
          *
-         * if there are overloaded method or constructor then it gonna match the right one
+         * if there are overloaded method or constructor then it gonna match the
+         * right one
          *
          */
     }

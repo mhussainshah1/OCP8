@@ -21,7 +21,14 @@ public class Cast {
 
 }
 
-class Animal {}
-class Monkey extends Mammal {}
-class Rabbit extends Animal {}
-class Turtle {}
+class Animal {
+}
+
+class Monkey extends Mammal {
+}
+
+class Rabbit extends Animal {
+}
+
+class Turtle {
+}

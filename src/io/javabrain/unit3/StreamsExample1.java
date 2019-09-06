@@ -17,20 +17,19 @@ public class StreamsExample1 {
         );
 
         //Java 7
-        for(Person p : people){
-            if(p.getLastName().startsWith("C")){
+        for (Person p : people) {
+            if (p.getLastName().startsWith("C")) {
                 System.out.println(p.getFirstName());
             }
         }
-        
+
         //Java 8
         //Source - provide elements in the stream
         people.stream()
-                
                 //Intermediate operation - single or multiple operations perform on stream
                 .filter(p -> p.getLastName().startsWith("C"))
-//                .filter(p->p.getLastName().contains("y"))
-                
+                //                .filter(p->p.getLastName().contains("y"))
+
                 //terminal operation - end condition - what causes the stream to act
                 .forEach(p -> System.out.println(p.getFirstName()));
 
@@ -38,7 +37,7 @@ public class StreamsExample1 {
                 .filter(p -> p.getLastName().startsWith("D"))
                 .count();
         System.out.println(count);
-        
+
         //parallel processing
         count = people.parallelStream()
                 .filter(p -> p.getLastName().startsWith("D"))
