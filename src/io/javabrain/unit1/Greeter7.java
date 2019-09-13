@@ -9,18 +9,17 @@ public class Greeter7 {
     public static void main(String[] args) {
         Greeter7 greeter = new Greeter7();
 
-        Greeting helloWorldGreeting = new HelloWorldGreeting(); //polymorphism       
+        Greeting helloWorldGreeting = new HelloWorldGreeting(); //polymorphism
+        helloWorldGreeting.perform();
+        greeter.greet(helloWorldGreeting);
+
         Greeting innerClassGreeting = new Greeting() {
             @Override
             public void perform() {
-                System.out.println("Ananomous Hello World!");
+                System.out.println("Anonymous Hello World!");
             }
         };
-
-        helloWorldGreeting.perform();
         innerClassGreeting.perform();
-
-        greeter.greet(helloWorldGreeting);
         greeter.greet(innerClassGreeting);
     }
 }

@@ -30,8 +30,10 @@ public class Unit1ExcerciseSolutionJava7 {
 
         //Step 3: Create a method that prints all people that have last name beginning with 'C'
         System.out.println("Printing people with last name beginning with C");
-        printLastNameBegginingWithC(people);
+        //Calling Behaviour
+//        printLastNameBegginingWithC(people);
 
+        //Passing behaviour
         printConditionally(people, new Condition() {
             @Override
             public boolean test(Person p) {
@@ -54,13 +56,14 @@ public class Unit1ExcerciseSolutionJava7 {
         }
     }
 
+    /*    
     private static void printLastNameBegginingWithC(List<Person> people) {
         for (Person p : people) {
             if (p.getLastName().startsWith("C")) {
                 System.out.println(p);
             }
         }
-    }
+    }*/
 
     private static void printConditionally(List<Person> people, Condition condition) {
         for (Person p : people) {
@@ -71,7 +74,6 @@ public class Unit1ExcerciseSolutionJava7 {
     }
 
     interface Condition {
-
         boolean test(Person p);
     }
 }
