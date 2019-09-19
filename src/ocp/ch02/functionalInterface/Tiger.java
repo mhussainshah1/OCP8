@@ -1,6 +1,6 @@
 package ocp.ch02.functionalInterface;
 
-class Animal {
+class Animal1 {
 }
 
 @FunctionalInterface
@@ -16,7 +16,7 @@ interface Skip extends Sprint {
 
 public class Tiger implements Sprint {
 
-    public void sprint(Animal animal) {
+    public void sprint(Animal1 animal) {
         System.out.println("Animal is sprinting fast! " + animal.toString());
     }
 }

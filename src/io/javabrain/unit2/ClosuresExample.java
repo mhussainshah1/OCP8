@@ -8,12 +8,12 @@ public class ClosuresExample {
         int a = 10;
         int b = 20;//effectively final
         
-        //previously in java 7
+        //previously, in java 7
         //final int b =20;
         doProcess(a, new IntConsumer() {
             @Override
             public void accept(int i) {
-                b =40;
+//                b =40;//Error:local variable referenced inside inner class must be effectively final or final
                 System.out.println(i + b);
             }
         });

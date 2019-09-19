@@ -1,16 +1,16 @@
 package ocp.ch02.functionalInterface;
 
-@FunctionalInterfac
+@FunctionalInterface
 interface Walk {
 }
 
-@FunctionalInterfac
+@FunctionalInterface
 interface Dance extends Sprint {
 
     public void dance(Animal animal);
 }
 
-@FunctionalInterfac
+@FunctionalInterface
 public interface Crawl {
 
     public void crawl();

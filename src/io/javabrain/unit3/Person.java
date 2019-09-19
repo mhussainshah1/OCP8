@@ -1,4 +1,4 @@
-package io.javabrains.common;
+package io.javabrain.unit3;
 
 public class Person {
 
@@ -41,5 +41,4 @@ public class Person {
     public String toString() {
         return "Person [firstName=" + firstName + ", lastName=" + lastName + ", age=" + age + "]";
     }
-
 }

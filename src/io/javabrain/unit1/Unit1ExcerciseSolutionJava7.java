@@ -64,7 +64,7 @@ public class Unit1ExcerciseSolutionJava7 {
             }
         }
     }*/
-
+    
     private static void printConditionally(List<Person> people, Condition condition) {
         for (Person p : people) {
             if (condition.test(p)) {
@@ -74,6 +74,7 @@ public class Unit1ExcerciseSolutionJava7 {
     }
 
     interface Condition {
+
         boolean test(Person p);
     }
 }

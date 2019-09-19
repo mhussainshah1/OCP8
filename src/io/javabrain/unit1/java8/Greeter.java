@@ -2,26 +2,26 @@ package io.javabrain.unit1.java8;
 
 public class Greeter {
 
-    public void greet(Greeting greeting) {
-        greeting.perform();
+    public void greet(Runnable greeting) {
+        greeting.run();
     }
 
     public static void main(String[] args) {
         Greeter greeter = new Greeter();
 
         //creating New Class - Implementation inside Class
-        Greeting helloWorldGreeting = new HelloWorldGreeting();
+        Runnable helloWorldGreeting = new HelloWorldGreeting();
         greeter.greet(helloWorldGreeting);
 
         //Creating a Function - Implementation outside class
-        Greeting lambdaGreeting = ()
+        Runnable lambdaGreeting = ()
                 -> System.out.println("Lambda - Hello world!");
         greeter.greet(lambdaGreeting);
 
         //inner Ananymous Class - Implementation outside class
-        Greeting innerClassGreeting = new Greeting() {
+        Runnable innerClassGreeting = new Runnable() {
             @Override
-            public void perform() {
+            public void run() {
                 System.out.println("Ananymous Class - Hello world!");
             }
         };

@@ -6,8 +6,8 @@ package io.javabrain.unit1;
 //Consumer<T> take in an object
 //Supplier get an object
 //Function<T,R> T take in an object, R return another object
-//BiConsumer<T,U> takein two object
-//BiFunction<T,U,R> take in two type, R return new object
+//BiConsumer<T,U> takein two objects
+//BiFunction<T,U,R> take in two Objects, R return new object
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;

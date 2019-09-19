@@ -1,13 +1,10 @@
 package ocp.ch02.functionalInterface;
 
-interface CheckTrait {
+import java.util.function.Predicate;
 
-    public boolean test(Animal a);
-}
+public class FindMatchingAnimals2 {
 
-public class FindMatchingAnimals {
-
-    private static void print(Animal animal, CheckTrait trait) {
+    private static void print(Animal animal, Predicate<Animal> trait) {
         if (trait.test(animal)) {
             System.out.println(animal);
         }
@@ -17,4 +14,5 @@ public class FindMatchingAnimals {
         print(new Animal("fish", false, true), a -> a.canHop());
         print(new Animal("kangaroo", true, false), a -> a.canHop());
     }
+
 }
