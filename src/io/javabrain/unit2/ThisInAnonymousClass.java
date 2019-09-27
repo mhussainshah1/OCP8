@@ -10,12 +10,16 @@ public class ThisInAnonymousClass {
     public static void main(String[] args) {
         ThisReferenceExample thisReferenceExample = new ThisReferenceExample();
         thisReferenceExample.doProcess(10, new IntConsumer() {
+            //private variable in Anonymous class
+            private int state =10;
+            
             @Override
             public void accept(int i) {
                 System.out.println("Value of i is " + i);
                 System.out.println(this);//Instance of Anonymous Inner Class
             }
-
+            
+            //Multiple methods in anonymous class
             @Override
             public String toString() {
                 return "Anonymous inner class";

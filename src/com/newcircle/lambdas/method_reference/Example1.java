@@ -1,7 +1,7 @@
 /**
  * A lambda is a way to define an anonymous function
  * But what if the function that we want to use is already written somewhere else
- * Do i re-write the function just because i want to use it.
+ * Do i re-write the function just because i want to use it?
  * There should be a way to take an existing function and pass to a place where
  * a lambda could be passed. That's what method reference do.
  *

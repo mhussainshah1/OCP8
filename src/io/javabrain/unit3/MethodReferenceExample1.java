@@ -10,14 +10,14 @@ public class MethodReferenceExample1 {
         //MethodReferenceExample1::printMessage === ()-> printMessage()
         t1.start();
 
-        Runnable staticReference = MethodReferenceExample1::printMessage;
-        Thread t2 = new Thread(staticReference);
+        Thread t2 = new Thread(MethodReferenceExample1::printMessage);//static
         t2.start();
 
         MethodReferenceExample1 object = new MethodReferenceExample1();
         Runnable instanceReference = object::doProcess;
 
         Consumer<MethodReferenceExample1> ref = MethodReferenceExample1::doProcess;
+        ref.accept(new MethodReferenceExample1());
 
     }
 

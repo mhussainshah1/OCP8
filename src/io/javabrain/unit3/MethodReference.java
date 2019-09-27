@@ -3,7 +3,7 @@ package io.javabrain.unit3;
 import java.util.function.Consumer;
 import java.util.function.Function;
 
-public class MethodReference2 {
+public class MethodReference {
 
     public static void main(String[] args) {
         Function<Integer, String> f1 = String::valueOf;//static method

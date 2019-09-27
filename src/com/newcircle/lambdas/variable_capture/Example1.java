@@ -16,6 +16,9 @@ public class Example1 {
     private void doSomething() {
         integers.forEach(x -> {
 
+            //private, protected, default and public variables can not inside lambda
+//            private int state = 10;
+            
             // "this" inside anonomous class points to the anonynmous class.
             // however, "this" inside lambda expression points towards outer 
             // enclosing class.

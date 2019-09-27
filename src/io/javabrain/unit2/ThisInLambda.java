@@ -1,14 +1,17 @@
 package io.javabrain.unit2;
 
 import java.util.function.IntConsumer;
-
 public class ThisInLambda {
     public void doProcess(int i, IntConsumer p) {
         p.accept(i);
     }
 
     public void execute() {
-        doProcess(10, i -> {
+        doProcess(10, i -> 
+        //Single function
+        {
+            //local variable in lambda
+            int state = 1;
             System.out.println("Value of i is " + i);
             System.out.println(this);//Instance of Object being Called
         });

@@ -1,5 +1,4 @@
 package io.javabrain.unit3;
-
 import java.util.function.Consumer;
 
 public class ClassName {
@@ -15,12 +14,12 @@ public class ClassName {
         ref1.run();
 
         //Instance Method
-        ClassName objectReference = new ClassName();
-        Runnable ref2 = objectReference::instanceMethod;//() -> objectReference.instanceMethod();
+        ClassName objectRef = new ClassName();
+        Runnable ref2 = objectRef::instanceMethod;//() -> objectRef.instanceMethod();
         ref2.run();
 
         Consumer<ClassName> ref3 = ClassName::instanceMethod;//x -> x.instanceMethod();
-        ref3.accept(objectReference);
+        ref3.accept(new ClassName());
 
         //Constructor
         Runnable ref4 = ClassName::new;//()-> new ClassName();
