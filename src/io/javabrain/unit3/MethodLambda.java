@@ -6,18 +6,20 @@ import java.util.function.Function;
 public class MethodLambda {
 
     public static void main(String[] args) {
-        Function<Integer, String> f1 = x -> String.valueOf(x);//static method
+        //static method
+        Function<Integer, String> f1 = x -> String.valueOf(x);
         System.out.println(f1.apply(4));
 
-        var printStream = System.out;//Instance method with created object
-        Consumer<String> c1 = p -> printStream.println(p);
+        //Instance method of specific object
+        Consumer<String> c1 = p -> System.out.println(p);
         c1.accept("world");
 
-        //instance method without creating object
+        //instance method of passing object
         Function<String, String> f2 = x -> x.toUpperCase();
         System.out.println(f2.apply("abc"));
 
-        Function<String, Integer> f3 = x -> new Integer(x);//constructor
+        //constructor
+        Function<String, Integer> f3 = x -> new Integer(x);
         System.out.println(f3.apply("11"));
     }
 }
