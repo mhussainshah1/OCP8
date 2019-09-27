@@ -5,24 +5,27 @@ import java.util.function.Consumer;
 
 public class MethodReferenceExample1 {
 
-    public static void main(String[] args) {
-        //static
-        Thread t1 = new Thread(() -> printMessage());        
-        t1.start();
-        
-        //or
-        Thread t2 = new Thread(MethodReferenceExample1::printMessage);
-        t2.start();
+    public MethodReferenceExample1() {
+        System.out.println("Constructor");
+    }
 
-        //MethodReferenceExample1::printMessage === ()-> printMessage()
-        
+    public static void main(String[] args) {
+        //static method
+        Thread t1 = new Thread(MethodReferenceExample1::printMessage);//() -> printMessage()
+        t1.start();
+
         //instance method of specific object
         MethodReferenceExample1 object = new MethodReferenceExample1();
-        Runnable instanceReference = object::doProcess;//
-
+        Thread t2 = new Thread(object::doProcess);//() -> object.doProcess()
+        t2.start();
+        
         //instance method of passing object
-        Consumer<MethodReferenceExample1> ref = MethodReferenceExample1::doProcess; //x->x.doProcess()
+        Consumer<MethodReferenceExample1> ref = MethodReferenceExample1::doProcess; //x -> x.doProcess()
         ref.accept(new MethodReferenceExample1());
+        
+        //constructor
+        Thread t3 = new Thread(MethodReferenceExample1::new);//()->new MethodReferenceExample1()
+        t3.start();
 
     }
 

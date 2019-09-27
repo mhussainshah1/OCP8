@@ -1,15 +1,21 @@
 package ocp.ch02.polymorphism;
 
 class Primate {
-    public boolean hasHair() {return true;}
+
+    public boolean hasHair() {
+        return true;
+    }
 }
 
 interface HasTail {
+
     public boolean isTailStriped();
 }
 
 public class Lemur extends Primate implements HasTail {
+
     public int age = 10;
+
     @Override
     public boolean isTailStriped() {
         return false;
@@ -18,13 +24,20 @@ public class Lemur extends Primate implements HasTail {
     public static void main(String[] args) {
         Lemur lemur = new Lemur();
         System.out.println(lemur.age);
-        
-        HasTail hasTail = lemur;
-        System.out.println(hasTail.age); // DOES NOT COMPILE
+
+        //Rule - 1
+        HasTail hasTail = lemur;//Up Casting
+//        System.out.println(hasTail.age); // DOES NOT COMPILE
         System.out.println(hasTail.isTailStriped());
 
         Primate primate = lemur;
-        System.out.println(primate.isTailStriped()); // DOES NOT COMPILE
+//        System.out.println(primate.isTailStriped()); // DOES NOT COMPILE
         System.out.println(primate.hasHair());
+
+//        Lemur lemur2 = primate; // DOES NOT COMPILE
+
+        //Rule - 2
+        Lemur lemur3 = (Lemur) primate;// Down Casting
+        System.out.println(lemur3.age);
     }
 }
