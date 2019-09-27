@@ -15,7 +15,7 @@ public class ThisInAnonymousClass {
             
             @Override
             public void accept(int i) {
-                System.out.println("Value of i is " + i);
+                System.out.println("Value of i is " + i );
                 System.out.println(this);//Instance of Anonymous Inner Class
             }
             
