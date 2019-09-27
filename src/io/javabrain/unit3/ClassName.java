@@ -19,7 +19,7 @@ public class ClassName {
         Runnable ref2 = objectReference::instanceMethod;//() -> objectReference.instanceMethod();
         ref2.run();
 
-        Consumer<ClassName> ref3 = ClassName::instanceMethod;//x -> objectReference.instanceMethod();
+        Consumer<ClassName> ref3 = ClassName::instanceMethod;//x -> x.instanceMethod();
         ref3.accept(objectReference);
 
         //Constructor

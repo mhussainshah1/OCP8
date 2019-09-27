@@ -32,7 +32,7 @@ public class ThisReferenceExample {
         thisReferenceExample.execute();
     }
 
-    public static void doProcess(int i, IntConsumer p) {
+    public void doProcess(int i, IntConsumer p) {
         p.accept(i);
     }
 
