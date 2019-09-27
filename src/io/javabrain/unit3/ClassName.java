@@ -8,16 +8,16 @@ public class ClassName {
     }
 
     public static void main(String[] args) {
-
         //Static Method
         Runnable ref1 = ClassName::staticMethod;//() -> ClassName.staticMethod();
         ref1.run();
 
-        //Instance Method
+        //Instance Method of specific object
         ClassName objectRef = new ClassName();
         Runnable ref2 = objectRef::instanceMethod;//() -> objectRef.instanceMethod();
         ref2.run();
 
+        //instance method of passing object
         Consumer<ClassName> ref3 = ClassName::instanceMethod;//x -> x.instanceMethod();
         ref3.accept(new ClassName());
 
