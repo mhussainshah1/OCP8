@@ -15,6 +15,7 @@ public class Capybara extends Rodent {
          */
         Capybara capybara = (Capybara) rodent;//Throws ClassCastException at runtime
 
+        //use instanceof to avoid runtime exception
         if (rodent instanceof Capybara) {
             Capybara capybara1 = (Capybara) rodent;
         }
