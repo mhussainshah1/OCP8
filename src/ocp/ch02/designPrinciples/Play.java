@@ -1,4 +1,4 @@
-package ocp.ch02.design;
+package ocp.ch02.designPrinciples;
 
 public class Play {
 
