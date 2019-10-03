@@ -1,4 +1,4 @@
-package ocp.ch02.designPattern;
+package ocp.ch02.designPattern.singleton;
 
 public class HayStorage {
 

@@ -1,4 +1,4 @@
-package ocp.ch02.designPattern;
+package ocp.ch02.designPattern.singleton;
 
 // Instantiation using a static block
 public class StaffRegister {
