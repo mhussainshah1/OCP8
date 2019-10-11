@@ -13,7 +13,11 @@ public class Guideline5 {
         list = new CopyOnWriteArrayList<>();
         list = new LinkedList<>();
 
+        var a = 1;
+        a = 2;
+        
         var list1 = new ArrayList<String>();
+        //Can't do Type Inference with var
         list1 = new CopyOnWriteArrayList<String>();
         list1 = new LinkedList<String>();
     }
