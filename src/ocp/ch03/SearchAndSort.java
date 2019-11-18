@@ -1,18 +1,20 @@
 package ocp.ch03;
 
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+
 public class SearchAndSort {
 
     public static void main(String[] args) {
-        String alpha = "";
-        for (char current = 'a'; current <= 'z'; current++) {
-            alpha += current;
-        }
-        System.out.println(alpha);
+        int[] numbers = {6, 9, 1, 8};
+        Arrays.sort(numbers); // [1,6,8,9]
+        System.out.println(Arrays.binarySearch(numbers, 6)); // 1
+        System.out.println(Arrays.binarySearch(numbers, 3)); // -2
 
-        StringBuilder alpha1 = new StringBuilder();
-        for (char current = 'a'; current <= 'z'; current++) {
-            alpha1.append(current);
-        }
-        System.out.println(alpha1);
+        List<Integer> list = Arrays.asList(9, 7, 5, 3);
+        Collections.sort(list); // [3, 5, 7, 9]
+        System.out.println(Collections.binarySearch(list, 3)); // 0
+        System.out.println(Collections.binarySearch(list, 2)); // -1       
     }
 }
