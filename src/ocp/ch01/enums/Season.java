@@ -20,8 +20,6 @@ public enum Season {
     }
 }
 
-enum ExtendedSeason 
-
-extends Season { // DOES NOT COMPILE: can’t extend an enum
+enum ExtendedSeason extends Season { // DOES NOT COMPILE: can’t extend an enum
 
 }

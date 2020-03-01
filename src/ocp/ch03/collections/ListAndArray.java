@@ -1,4 +1,4 @@
-package ocp.ch03;
+package ocp.ch03.collections;
 
 import java.util.Arrays;
 import java.util.List;
