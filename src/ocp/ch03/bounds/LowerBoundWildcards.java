@@ -13,11 +13,11 @@ public class LowerBoundWildcards {
         List<Object> objects = new ArrayList<>(strings);
         addSound(strings);
         addSound(objects);
-        
-         List<? super IOException> exceptions = new ArrayList<Exception>();
-         exceptions.add(new Exception()); // DOES NOT COMPILE
-         exceptions.add(new IOException());
-         exceptions.add(new FileNotFoundException());
+
+        List<? super IOException> exceptions = new ArrayList<Exception>();
+        exceptions.add(new Exception()); // DOES NOT COMPILE
+        exceptions.add(new IOException());
+        exceptions.add(new FileNotFoundException());
     }
 //
 //    public static void addSound(List<?> list) {
@@ -32,6 +32,7 @@ public class LowerBoundWildcards {
 //        list.add("quack");
 //    }
 //
+
     public static void addSound(List<? super String> list) {    // lower bound
         list.add("quack");
     }
