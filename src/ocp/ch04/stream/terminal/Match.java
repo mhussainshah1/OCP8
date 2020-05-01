@@ -1,4 +1,4 @@
-package ocp.ch04.stream;
+package ocp.ch04.stream.terminal;
 
 import java.util.Arrays;
 import java.util.List;

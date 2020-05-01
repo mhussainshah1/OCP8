@@ -1,6 +1,8 @@
-package ocp.ch04.stream;
+package ocp.ch04.stream.terminal;
 
+import java.util.Set;
 import java.util.TreeSet;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class Collect {
@@ -14,7 +16,13 @@ public class Collect {
         TreeSet<String> set = stream.collect(TreeSet::new, TreeSet::add,
                 TreeSet::addAll);
         System.out.println(set); // [f, l, o, w]
-        
-        
+
+        stream = Stream.of("w", "o", "l", "f");
+        set = stream.collect(Collectors.toCollection(TreeSet::new));
+        System.out.println(set); // [f, l, o, w]
+
+        stream = Stream.of("w", "o", "l", "f");
+        Set<String> set1 = stream.collect(Collectors.toSet());
+        System.out.println(set1); // [f, w, l, o]
     }
 }

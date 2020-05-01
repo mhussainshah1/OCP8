@@ -4,10 +4,15 @@ package Java8Streams;
 //https://www.youtube.com/watch?v=t1-YZ6bF-g0
 import java.util.Arrays;
 import java.util.List;
-import java.util.stream.*;
-import java.util.*;
-import java.nio.file.*;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.HashMap;
+import java.util.IntSummaryStatistics;
+import java.util.Map;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
+import java.util.stream.Stream;
 
 public class JavaStreams {
 
@@ -15,41 +20,41 @@ public class JavaStreams {
         // 1. Integer Stream
         IntStream
                 .range(1, 10)
-                .forEach(System.out::print);
+                .forEach(System.out::print);//123456789
         System.out.println();
 
         // 2. Integer Stream with skip
         IntStream
                 .range(1, 10)
                 .skip(5)
-                .forEach(x -> System.out.println(x));
+                .forEach(x -> System.out.print(x));//6789
         System.out.println();
 
         // 3. Integer Stream with sum
         System.out.println(
                 IntStream
                         .range(1, 5)
-                        .sum());
+                        .sum());//10
         System.out.println();
 
         // 4. Stream.of, sorted and findFirst
         Stream.of("Ava", "Aneri", "Alberto")
                 .sorted()
                 .findFirst()
-                .ifPresent(System.out::println);
+                .ifPresent(System.out::println);//Alberto
 
         // 5. Stream from Array, sort, filter and print
         String[] names = {"Al", "Ankit", "Kushal", "Brent", "Sarika", "amanda", "Hans", "Shivika", "Sarah"};
         Arrays.stream(names) // same as Stream.of(names)
                 .filter(x -> x.startsWith("S"))
                 .sorted()
-                .forEach(System.out::println);
+                .forEach((s) -> System.out.print(s + ","));//Sarah,Sarika,Shivika
 
         // 6. average of squares of an int array
         Arrays.stream(new int[]{2, 4, 6, 8, 10})
                 .map(x -> x * x)
                 .average()
-                .ifPresent(System.out::println);
+                .ifPresent(System.out::println);//44.0
 
         // 7. Stream from List, filter and print
         List<String> people = Arrays.asList("Al", "Ankit", "Brent", "Sarika", "amanda", "Hans", "Shivika", "Sarah");
@@ -57,7 +62,7 @@ public class JavaStreams {
                 .stream()
                 .map(String::toLowerCase)
                 .filter(x -> x.startsWith("a"))
-                .forEach(System.out::println);
+                .forEach(System.out::println); //al,ankit,amanda
 
         // 8. Stream rows from text file, sort, filter, and print
         Stream<String> bands = Files.lines(Paths.get("bands.txt"));
@@ -105,7 +110,7 @@ public class JavaStreams {
         for (String key : map.keySet()) {
             System.out.println(key + "  " + map.get(key));
         }
-
+        
         // 13. Reduction - sum
         double total = Stream.of(7.3, 1.5, 4.8)
                 .reduce(0.0, (Double a, Double b) -> a + b);
