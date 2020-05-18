@@ -10,8 +10,8 @@ public class One {
 
         stream = Stream.iterate("", s -> s + "1");
         stream.limit(3)
-              .map(x -> x + "2")
-              .forEach(System.out::println);//2
-                                            //12
+                .map(x -> x + "2")
+                .forEach(System.out::println);//2
+        //12
     }
 }

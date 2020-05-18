@@ -12,7 +12,6 @@ public class Six {
 //        s = Stream.generate(() -> "meow");
 //        match = s.anyMatch(String::isEmpty); //hangs
 //        System.out.println(match);
-        
 //        s = Stream.generate(() -> "meow");
 //        match = s.noneMatch(String::isEmpty); //hangs
 //        System.out.println(match);
